@@ -1,26 +1,60 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flou Decoration</title>
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flou Decoration</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="canvas-container"></div>
+<!-- BACKGROUND -->
+<div class="bg"></div>
 
-<div class="ui">
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">∞</div>
   <h1>Flou Decoration</h1>
-  <button id="chooseBtn">PILIH</button>
 </div>
 
-<!-- THREE JS -->
-<script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+<!-- CAROUSEL -->
+<div class="carousel" id="carousel">
 
-<!-- SCRIPT -->
+  <div class="card active">
+    <img src="assets/card1.jpg">
+  </div>
+
+  <div class="card">
+    <img src="assets/card2.jpg">
+  </div>
+
+  <div class="card">
+    <img src="assets/card3.jpg">
+  </div>
+
+  <div class="card">
+    <img src="assets/card4.jpg">
+  </div>
+
+  <div class="card">
+    <img src="assets/card5.jpg">
+  </div>
+
+</div>
+
+<!-- ORNAMENT -->
+<img src="assets/ornament.png" class="ornament">
+
+<!-- BUTTON -->
+<button class="btn">PILIH</button>
+
+<!-- SOSMED -->
+<div class="social">
+  <span>📷</span>
+  <span>📘</span>
+  <span>🟢</span>
+</div>
+
 <script src="script.js"></script>
-
 </body>
 </html>
