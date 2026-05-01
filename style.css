@@ -1,96 +1,116 @@
-body {
+* {
   margin: 0;
-  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
   font-family: serif;
-  color: white;
 }
 
-/* BACKGROUND */
-.bg {
+body {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+}
+
+/* overlay gelap */
+body::before {
+  content: "";
   position: fixed;
   inset: 0;
-  background: url("assets/bg.jpg") center/cover;
-  filter: blur(20px) brightness(0.4);
-  transform: scale(1.2);
+  background: rgba(0,0,0,0.7);
+  z-index: -1;
 }
 
 /* HEADER */
-.header {
-  text-align: center;
-  margin-top: 20px;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
 }
 
 .logo {
-  font-size: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-h1 {
-  font-size: 28px;
+.logo-icon {
+  font-size: 30px;
+}
+
+.menu-btn {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* CAROUSEL */
-.carousel {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.carousel-section {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-wrapper {
   display: flex;
   gap: 20px;
-}
-
-/* CARD */
-.card {
-  width: 180px;
-  height: 260px;
-  border-radius: 15px;
   overflow: hidden;
-  transform: scale(0.8);
-  opacity: 0.5;
-  transition: 0.4s;
+  width: 80%;
 }
 
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* CARD STYLE (EMAS + FRAME) */
+.card {
+  min-width: 250px;
+  height: 350px;
+  background: linear-gradient(145deg, #c9a24b, #f5e6a3);
+  border: 5px solid gold;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  transition: transform 0.3s;
 }
 
-/* ACTIVE */
-.card.active {
-  transform: scale(1);
-  opacity: 1;
+.card h2 {
+  margin-bottom: 10px;
 }
 
-/* EFFECT SAMPING */
-.card:nth-child(1) { transform: rotateY(25deg); }
-.card:nth-child(5) { transform: rotateY(-25deg); }
-
-/* ORNAMENT */
-.ornament {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  width: 250px;
-  transform: translateX(-50%);
+.card:hover {
+  transform: scale(1.05);
 }
 
 /* BUTTON */
-.btn {
-  position: absolute;
-  bottom: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 40px;
-  border-radius: 30px;
+#chooseBtn {
+  margin-top: 20px;
+  padding: 10px 40px;
+  background: lightgreen;
   border: none;
-  background: #8ef3c7;
-  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-/* SOSMED */
-.social {
+/* FOOTER */
+footer {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   width: 100%;
   text-align: center;
 }
