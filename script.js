@@ -7,8 +7,6 @@ window.onload = () => {
   const scene = new THREE.Scene();
 
 };
-const container = document.getElementById("canvas-container");
-
 /* SCENE */
 const scene = new THREE.Scene();
 
