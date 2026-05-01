@@ -1,3 +1,4 @@
+console.log(THREE);
 const container = document.getElementById("canvas-container");
 
 /* SCENE */
