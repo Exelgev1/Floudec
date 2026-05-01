@@ -1,4 +1,12 @@
-console.log(THREE);
+window.onload = () => {
+
+  console.log(THREE);
+
+  const container = document.getElementById("canvas-container");
+
+  const scene = new THREE.Scene();
+
+};
 const container = document.getElementById("canvas-container");
 
 /* SCENE */
