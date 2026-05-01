@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flou Decoration</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Flou Decoration</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- BACKGROUND -->
-<div class="bg"></div>
-
 <!-- HEADER -->
-<div class="header">
-  <div class="logo">∞</div>
-  <h1>Flou Decoration</h1>
+<header>
+  <div class="logo">
+    <div class="logo-icon">∞</div>
+    <h1>Flou Decoration</h1>
+  </div>
+
+  <div class="menu-btn" id="menuBtn">☰</div>
+</header>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2>Tentang Kami</h2>
+    <p>Kami menyediakan dekorasi wedding premium dengan berbagai pilihan paket.</p>
+    <button onclick="closePopup()">Tutup</button>
+  </div>
 </div>
 
 <!-- CAROUSEL -->
-<div class="carousel" id="carousel">
+<section class="carousel-section">
+  <div class="carousel-wrapper" id="carousel">
 
-  <div class="card active">
-    <img src="assets/card1.jpg">
+    <!-- CARD -->
+    <div class="card" data-bg="img1.jpg">
+      <h2>PAKET INDOOR</h2>
+      <p>Dekorasi elegan untuk ruangan indoor dengan lighting premium.</p>
+    </div>
+
+    <div class="card" data-bg="img2.jpg">
+      <h2>PAKET 4 METER</h2>
+      <p>Dekor minimalis 4 meter cocok untuk acara intimate.</p>
+    </div>
+
+    <div class="card" data-bg="img3.jpg">
+      <h2>PAKET 6 METER</h2>
+      <p>Dekor medium dengan kombinasi bunga dan backdrop artistik.</p>
+    </div>
+
+    <div class="card" data-bg="img4.jpg">
+      <h2>PAKET 8 METER</h2>
+      <p>Dekor besar dan megah untuk acara skala besar.</p>
+    </div>
+
+    <div class="card" data-bg="img5.jpg">
+      <h2>PAKET KUSTOM</h2>
+      <p>Bebas request sesuai keinginan dan konsep kamu.</p>
+    </div>
+
   </div>
 
-  <div class="card">
-    <img src="assets/card2.jpg">
-  </div>
-
-  <div class="card">
-    <img src="assets/card3.jpg">
-  </div>
-
-  <div class="card">
-    <img src="assets/card4.jpg">
-  </div>
-
-  <div class="card">
-    <img src="assets/card5.jpg">
-  </div>
-
-</div>
-
-<!-- ORNAMENT -->
-<img src="assets/ornament.png" class="ornament">
-
-<!-- BUTTON -->
-<button class="btn">PILIH</button>
+  <!-- BUTTON -->
+  <button id="chooseBtn">PILIH</button>
+</section>
 
 <!-- SOSMED -->
-<div class="social">
-  <span>📷</span>
-  <span>📘</span>
-  <span>🟢</span>
-</div>
+<footer>
+  <div class="social">
+    <span>📷</span>
+    <span>📘</span>
+    <span>🟢</span>
+  </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
